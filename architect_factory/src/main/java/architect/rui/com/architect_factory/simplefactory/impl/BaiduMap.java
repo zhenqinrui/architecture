@@ -17,7 +17,7 @@ public class BaiduMap implements IMapView {
 
     @Override
     public View getMapView() {
-        Log.i("factory", "显示百度地图getview");
+        Log.i("factory", "调用百度地图getview");
         return null;
     }
 

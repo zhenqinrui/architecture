@@ -3,6 +3,8 @@ package architect.rui.com.architect_factory.factorymethod.imp;
 import android.util.Log;
 import android.view.View;
 
+import javax.xml.parsers.SAXParserFactory;
+
 import architect.rui.com.architect_factory.factorymethod.IMapView;
 
 
