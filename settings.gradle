@@ -1,1 +1,1 @@
-include ':app', ':architect_builder', ':architect_adapter', ':architect_principle', ':architect_singleton', ':architect_factory'
+include ':app', ':architect_builder', ':architect_adapter', ':architect_principle', ':architect_singleton', ':architect_factory', ':architect_factory_lbs'

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/map_container"
+    tools:context="architect.rui.com.architect_factory_lbs.BaiduMapActivity">
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="百度地图"-->
+        <!--android:onClick="baidu"-->
+        <!--android:id="@+id/baidu_map_btn"/>-->
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="高德地图"-->
+        <!--android:onClick="gaode"-->
+        <!--android:id="@+id/gaode_map_btn"/>-->
+
+</FrameLayout>

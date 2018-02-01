@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 //        ImageCache imageCache = new MemoryImageCache();
         ImageCache imageCache = new DoubleImageCache();
         ImageLoader loader = new ImageLoader(imageCache);
-        loader.loadImage(this, "http://www.baidu.com", imageview);
+//        loader.loadImage(this, "http://www.baidu.com", imageview);
 
     }
 }
