@@ -5,10 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 
 import architect.rui.com.architect_factory.R;
 import architect.rui.com.architect_factory.factorymethod.imp.BaiduMapFactory;
-import architect.rui.com.architect_factory.simplefactory.IMapView;
-import architect.rui.com.architect_factory.simplefactory.impl.MapViewFactory;
+import architect.rui.com.architect_factory.factorymethod.imp.GaodeMap;
+import architect.rui.com.architect_factory.factorymethod.imp2.DefaultMapFactory;
 
-public class TestSimpleFactoryActivity extends AppCompatActivity {
+public class FactoryMethodActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,5 +24,10 @@ public class TestSimpleFactoryActivity extends AppCompatActivity {
         // 需求在MapViewFactory中修改代码，而高德又没有，就不应该写在公用的MapViewFactory中，因此引入了工厂方法，即需要对工厂进行抽象（使用接口)
         IMapFactory factory = new BaiduMapFactory();
         factory.getMapView().getMapView();
+
+        // 或者使用变种的方式，避免创建多个具体工厂(但是这种方式还是依赖了BaideMap这个类),建议使用以上的方式
+        DefaultMapFactory defaultMapFactory = new DefaultMapFactory();
+        IMapView mapView = defaultMapFactory.getMapView(GaodeMap.class);
+        mapView.getMapView();
     }
 }

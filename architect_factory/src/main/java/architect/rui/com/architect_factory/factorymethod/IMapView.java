@@ -1,6 +1,9 @@
 package architect.rui.com.architect_factory.factorymethod;
 
+import android.support.constraint.solver.ArrayLinkedVariables;
 import android.view.View;
+
+import java.util.ArrayList;
 
 /**
  * 作者: zengqinrui on 18/1/31 12:31
