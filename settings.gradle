@@ -1,1 +1,1 @@
-include ':app', ':architect_builder', ':architect_adapter', ':architect_principle', ':architect_singleton', ':architect_factory', ':architect_factory_lbs', ':architect_lbs_baidu', ':architect_lbs_base', ':architect_lbs_gaode'
+include ':app', ':architect_builder', ':architect_adapter', ':architect_principle', ':architect_singleton', ':architect_methodfactory', ':architect_methodfactory_lbs', ':architect_lbs_baidu', ':architect_lbs_base', ':architect_lbs_gaode', ':architect_absfactory'
