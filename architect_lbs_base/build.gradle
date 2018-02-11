@@ -1,11 +1,10 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 26
     buildToolsVersion "27.0.3"
 
     defaultConfig {
-        applicationId "architect.rui.com.architect_factory_lbs"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
@@ -20,16 +19,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    sourceSets{
-        main{
-            jniLibs.srcDir 'libs' // 也可把so放入src/main/jniLibs目录，程会自动加载src目录下的so动态库
-            //说明so的路径为该libs路径，关联所有地图SDK的so文件
-        }
-    }
 }
-
-
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -37,8 +27,5 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile project(':architect_lbs_baidu')
-    compile project(':architect_lbs_gaode')
     testCompile 'junit:junit:4.12'
 }

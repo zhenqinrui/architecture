@@ -2,37 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="architect.rui.com.architect_factory_lbs">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    //获取设备网络状态，禁用后无法获取网络状态
-    <uses-permission android:name="android.permission.INTERNET"/>
-    //网络权限，当禁用后，无法进行检索等相关业务
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    //读取设备硬件信息，统计数据
-    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
-    //读取系统信息，包含系统版本等信息，用作统计
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    //获取设备的网络状态，鉴权所需网络代理
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    //允许sd卡写权限，需写入地图数据，禁用后无法显示地图
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    //获取统计数据
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    //鉴权所需该权限获取进程列表
-    <uses-permission android:name="android.permission.CAMERA" />
-    //使用步行AR导航，配置Camera权限
-
-    <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application android:allowBackup="true" android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true" android:theme="@style/AppTheme"
         android:name=".MyApplication">
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="sQFPXlrgxeoVpGwmdCOK7aPMHQPZBvxm" />
-        <meta-data android:name="com.amap.api.v2.apikey"
-            android:value="0b0d30a8b40352722d4f29aae033944f"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

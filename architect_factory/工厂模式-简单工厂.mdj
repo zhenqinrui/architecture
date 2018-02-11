@@ -2245,6 +2245,15 @@
 					"isFinalSpecialization": false,
 					"isLeaf": false,
 					"isActive": false
+				},
+				{
+					"_type": "UMLPackage",
+					"_id": "AAAAAAFhUM0LTUDc1AA=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "location",
+					"visibility": "public"
 				}
 			],
 			"visibility": "public"

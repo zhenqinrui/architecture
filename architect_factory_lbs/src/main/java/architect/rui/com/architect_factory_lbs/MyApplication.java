@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.baidu.mapapi.SDKInitializer;
 
+
 /**
  * 作者: zengqinrui on 18/2/1 13:31
  * 邮箱：zengqinrui@szy.cn
