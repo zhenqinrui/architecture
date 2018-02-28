@@ -1,7 +1,9 @@
 package builder;
 
-import android.os.Build;
 import android.util.Log;
+
+import builder.simple1.Computer;
+
 
 /**
  * 作者: zengqinrui on 17/12/22 22:52
@@ -20,13 +22,23 @@ public class Charge {
     }
 
     public void pay() {
+
         if ("alipay".equals(builder.param.channel)) {
             Log.i("zqr", "alipay:" + builder.param.product);
         } else if("wxpay".equals(builder.param.channel)) {
             Log.i("zqr", "wxpay:" + builder.param.product);
         }
+        MyAlertDialog dialog = new MyAlertDialog.Builder().content("aa").title("title").build();
+        dialog.show();
+//
+        Computer computer = new Computer.MacBookProComputerBuild().setCpu("cpu").setMemory("memory").build();
+
+        Charge charge = new Charge.Builder().product("p").channel("c").orderId("o").build();
     }
 
+    /**
+     * 构建的对象 vo
+     */
     public static class ChargeParam{
         String orderId;
         String channel;
