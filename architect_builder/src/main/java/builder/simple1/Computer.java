@@ -8,14 +8,22 @@ package builder.simple1;
  */
 public class Computer {
 
+    private String memory; // 内存
+    private String display; // 显卡
+    private String cpu;
+
+
     // 私有构造函数
     private Computer() {
 
     }
 
-    private String memory; // 内存
-    private String display; // 显卡
-    private String cpu;
+    private Computer(WindowComputerBuild builder) {
+        this.memory = builder.getMemory();
+        this.display = builder.getDisplay();
+        this.cpu = builder.getCpu();
+    }
+
 
     public String getMemory() {
         return memory;
@@ -59,7 +67,7 @@ public class Computer {
     }
 
     /**
-     * 创建苹果电脑的规范
+     * 创建苹果电脑的规范，方式一(推荐用这种), 保证了Computer实体类的干净
      */
     public static class MacBookProComputerBuild implements Builder {
 
@@ -89,10 +97,55 @@ public class Computer {
             return this;
         }
 
+
         @Override
         public Computer build() {
             return computer;
         }
     }
 
+    /**
+     * 方式二，在build方法中，将this（builder)传入要构造的对象里面
+     */
+    public static class WindowComputerBuild implements Builder{
+
+        private String memory;
+        private String display;
+        private String cpu;
+
+        @Override
+        public Builder setMemory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+
+        @Override
+        public Builder setDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+
+        @Override
+        public Builder setCpu(String cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+
+        public String getMemory() {
+            return memory;
+        }
+
+        public String getDisplay() {
+            return display;
+        }
+
+        public String getCpu() {
+            return cpu;
+        }
+
+        @Override
+        public Computer build() {
+            return new Computer(this);
+        }
+    }
 }
